@@ -154,3 +154,6 @@ autocmd bufread *.bbcode set filetype=bbcode
 
 let g:EclimHome = '/usr/share/vim/vimfiles/eclim'
 let g:EclimEclipseHome = '/usr/share/eclipse'
+
+
+let g:syntastic_enable_signs = 1

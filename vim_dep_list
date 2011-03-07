@@ -1,4 +1,8 @@
+#plugins
 NERD_tree
+bufexplorer
+NERD_commenter
+supertab
 
 #colorcheme
 desert256

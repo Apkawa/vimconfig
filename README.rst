@@ -1,8 +1,11 @@
-#plugins
+plugins
+=======
 NERD_tree
 bufexplorer
 NERD_commenter
 supertab
+snipMate
 
-#colorcheme
+colorcheme
+==========
 desert256

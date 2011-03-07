@@ -1,0 +1,91 @@
+snippet prog
+	program ${1:foo};
+	${2}
+	begin
+		${3}
+	end.
+	
+snippet func
+	function ${1:foo}(${2:bar:integer};${3:var foobar: string}): ${4:integer};
+		begin
+			${1:foo} := 1;
+			${5}
+		end;
+
+snippet proc
+	procedure ${1:foo}(${2:bar:integer};var ${3:foobar:string});
+		begin
+		end;
+
+snippet begin
+	begin
+		${1}
+	end;
+
+snippet for
+	for ${1:i}:=${2:1} to ${3:10} do
+		begin
+			${4}
+		end;
+
+snippet while
+	while ${1:True} do
+		begin
+			${2}
+		end;
+
+snippet repeat
+	repeat
+		${2}
+	until ${1:False};
+
+snippet if if then
+	if ${1:True} then
+		begin
+			${2}
+		end
+
+snippet if if then else
+	if ${1:True} then
+		begin
+			${2}
+		end
+	else
+		begin
+			${3}
+		end;
+
+snippet case
+	case ${1:foo} of
+		${2:True}:
+			begin
+				${3}
+			end;
+		else
+				${4}
+		end;
+
+snippet array
+	array [${1:1}..${2:10}] of ${3:integer};
+
+snippet record
+	record
+		${1:foo}:${2:string}
+	end;
+
+snippet module
+	unit ${1:foobar}
+
+	interface
+	type
+		${2:bar=integer};
+
+	procedure ${3:foo}(var i:${2});
+
+	implementation
+		procedure ${3};
+			begin
+				${4}
+			end;
+
+		end.

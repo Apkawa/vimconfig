@@ -16,9 +16,9 @@ supertab
 snipMate
 --------
 
-jpythonfold.vim
+python_ifold.vim
 ---------------
-save as ftplugin/python.vim
+http://www.vim.org/scripts/script.php?script_id=2002
 
 syntastic
 ---------

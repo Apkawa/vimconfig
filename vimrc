@@ -20,9 +20,11 @@ set ruler
 set showcmd  
 " Включаем нумерацию строк
 set nu
+
 " Фолдинг по отсупам
 set foldmethod=syntax
 set foldcolumn=3
+
 " Поиск по набору текста (очень полезная функция)
 set incsearch
 " Отключаем подстветку найденных вариантов, и так всё видно.
@@ -153,7 +155,13 @@ autocmd bufread *.bbcode set filetype=bbcode
 "autocmd bufread *.bbcode set foldmethod=expr
 
 let g:EclimHome = '/usr/share/vim/vimfiles/eclim'
-let g:EclimEclipseHome = '/usr/share/eclipse'
+let g:EclimEclipseHome = '/usr/share/eclipse-ecj-3.5'
 
+" g:EclimValidateSortResults (Default: ‘occurrence’) - 
+" If set to ‘severity’, the validation results will be sorted by severity (errors > warnings > info > etc.)
+"let g:EclimValidateSortResults = 'errors'
 
-let g:syntastic_enable_signs = 1
+"syntactic plugin
+"
+"let g:syntastic_enable_signs = 1
+"let g:syntastic_auto_loc_list = 1

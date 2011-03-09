@@ -5,7 +5,7 @@ set background=dark
 syntax on
 
 colorscheme desert256
-" Настройка меню автодополнения
+" Настройка цвета меню автодополнения
 highlight Pmenu ctermbg=grey ctermfg=black
 highlight PmenuSel ctermbg=blue ctermfg=white
 highlight Pmenu guifg=#CCCCCC guibg=#0f0f0f 
@@ -116,7 +116,6 @@ vmap > >gv
 " Выключаем ненавистный режим замены
 imap >Ins> <Esc>i
 
-
 " Автодополнение.
 "autocmd FileType python set omnifunc=pysmell#Complete
 let python_highlight_all=1
@@ -131,37 +130,33 @@ set complete+=t
 set completeopt-=preview 
 set completeopt+=longest 
 
-
-
-"imap <C-d> :call RopeShowDoc()<CR>
-"map <C-d> :call RopeShowDoc()<CR>
-"
 let g:snips_author="Apkawa"
-
-"bbcode
-"function BBCodeFold(line)
-"    let str = getline(a:line)
-"    if str =~ '{'
-"        return '>1'
-"    elseif str =~ '}'
-"        return '<1'
-"    else
-"        return foldlevel(a:line - 1)
-"   endif
-"endfun
 
 autocmd bufread *.bbcode set filetype=bbcode
 "autocmd bufread *.bbcode set foldexpr=BBCodeFold(v:lnum)
 "autocmd bufread *.bbcode set foldmethod=expr
 
+"**********************************
+"     eclim plugin
+"**********************************
 let g:EclimHome = '/usr/share/vim/vimfiles/eclim'
 let g:EclimEclipseHome = '/usr/share/eclipse-ecj-3.5'
+let g:EclimValidateSortResults = 'severity'
 
-" g:EclimValidateSortResults (Default: ‘occurrence’) - 
-" If set to ‘severity’, the validation results will be sorted by severity (errors > warnings > info > etc.)
-"let g:EclimValidateSortResults = 'errors'
-
-"syntactic plugin
-"
+"**********************************
+"      syntactic plugin
+"**********************************
 "let g:syntastic_enable_signs = 1
 "let g:syntastic_auto_loc_list = 1
+
+
+"**********************************
+"       todolist
+"       TODO:
+"       FIXME:
+"       XXX:
+"       REFACTORME:
+"**********************************
+map <leader>t <Plug>TaskList
+let g:tlTokenList = ["TODO", "FIXME", "XXX", "REFACTORME"]
+let g:tlWindowPosition = 1

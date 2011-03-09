@@ -160,3 +160,11 @@ let g:EclimValidateSortResults = 'severity'
 map <leader>t <Plug>TaskList
 let g:tlTokenList = ["TODO", "FIXME", "XXX", "REFACTORME"]
 let g:tlWindowPosition = 1
+
+"**********************************
+"      compview plugin
+"      override default search /
+"**********************************
+unmap <leader>v
+unmap /
+map / <Plug>CompView

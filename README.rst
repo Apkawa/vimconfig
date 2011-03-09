@@ -33,13 +33,18 @@ ZenCoding
 http://www.vim.org/scripts/script.php?script_id=2981
 
 colorcheme
-==========
+----------
 desert256
 
 tasklist
-========
+--------
 http://www.vim.org/scripts/script.php?script_id=2607
 <leader>t - show TODO
+
+compview
+--------
+http://www.vim.org/scripts/script.php?script_id=1803
+override default search /
 
 
 TODO:

@@ -116,13 +116,14 @@ vmap > >gv
 " Выключаем ненавистный режим замены
 imap >Ins> <Esc>i
 
-" Автодополнение.
-"autocmd FileType python set omnifunc=pysmell#Complete
+"**********************************
+"     trailing wintespace
+"**********************************
+autocmd BufWritePre * :%s/\s\+$//e
+
 let python_highlight_all=1
-"Pydiction
-"let g:pydiction_location = '/home/apkawa/.vim/__source/pydiction-1.2/complete-dict' 
+
 " Tab autocompletion 
-"
 set complete+=. 
 set complete+=k 
 set complete+=b 
@@ -168,3 +169,14 @@ let g:tlWindowPosition = 1
 unmap <leader>v
 unmap /
 map / <Plug>CompView
+
+"**********************************
+"      pep8 plugin
+"**********************************
+autocmd FileType python map <buffer> <F6> :call Pep8()<CR>
+
+
+"**********************************
+"      .. plugin
+"**********************************
+

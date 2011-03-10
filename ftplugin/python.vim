@@ -23,7 +23,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent
-set foldcolumn=1
+set foldcolumn=3
 
 let w:nestinglevel = 0
 let w:signature = 0

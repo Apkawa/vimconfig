@@ -8,16 +8,16 @@ colorscheme desert256
 " Настройка цвета меню автодополнения
 highlight Pmenu ctermbg=grey ctermfg=black
 highlight PmenuSel ctermbg=blue ctermfg=white
-highlight Pmenu guifg=#CCCCCC guibg=#0f0f0f 
+highlight Pmenu guifg=#CCCCCC guibg=#0f0f0f
 highlight PmenuSel guifg=#AAAAAA guibg=#222222
 
 set guifont=Terminus\ 16
 " Включаем несовместимость настроек с Vi (ибо Vi нам и не понадобится).
 set nocompatible
 " Показывать положение курсора всё время.
-set ruler  
+set ruler
 " Показывать незавершённые команды в статусбаре
-set showcmd  
+set showcmd
 " Включаем нумерацию строк
 set nu
 
@@ -35,7 +35,7 @@ set scrolljump=7
 set scrolloff=7
 " Выключаем надоедливый "звонок"
 set novisualbell
-set t_vb=   
+set t_vb=
 " Поддержка мыши
 set mouse=a
 set mousemodel=popup
@@ -64,7 +64,7 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 " Формат строки состояния
-set statusline=%<%f%h%m%r\ %b\ %{&encoding}\ 0x\ \ %l,%c%V\ %P 
+set statusline=%<%f%h%m%r\ %b\ %{&encoding}\ 0x\ \ %l,%c%V\ %P
 set laststatus=2
 " Включаем "умные" отспупы ( например, автоотступ после {)
 set smartindent
@@ -123,13 +123,13 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 let python_highlight_all=1
 
-" Tab autocompletion 
-set complete+=. 
-set complete+=k 
-set complete+=b 
-set complete+=t 
-set completeopt-=preview 
-set completeopt+=longest 
+" Tab autocompletion
+set complete+=.
+set complete+=k
+set complete+=b
+set complete+=t
+set completeopt-=preview
+set completeopt+=longest
 
 let g:snips_author="Apkawa"
 
@@ -139,10 +139,14 @@ autocmd bufread *.bbcode set filetype=bbcode
 
 "**********************************
 "     eclim plugin
+"       required:
+"           pylint
+"           pyflakes
 "**********************************
 let g:EclimHome = '/usr/share/vim/vimfiles/eclim'
 let g:EclimEclipseHome = '/usr/share/eclipse-ecj-3.5'
 let g:EclimValidateSortResults = 'severity'
+let g:EclimEchoHighlight = 'Error'
 
 "**********************************
 "      syntactic plugin
@@ -164,16 +168,32 @@ let g:tlWindowPosition = 1
 
 "**********************************
 "      compview plugin
-"      override default search /
+"      ?
 "**********************************
 unmap <leader>v
-unmap /
-map / <Plug>CompView
+unmap ?
+map ? <Plug>CompView
 
 "**********************************
 "      pep8 plugin
+"      required:
+"           pep8
 "**********************************
 autocmd FileType python map <buffer> <F6> :call Pep8()<CR>
+
+"**********************************
+"      PyLint plugin
+"**********************************
+autocmd FileType python map <S-F6> :PyLint<CR>
+
+"**********************************
+"      rope plugin
+"      required:
+"           python2-rope
+"           python-ropevim
+"**********************************
+let ropevim_vim_completion = 1
+let ropevim_extended_complete=1
 
 
 "**********************************

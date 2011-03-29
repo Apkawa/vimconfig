@@ -3,15 +3,16 @@ plugins
 
 NERD_tree
 ---------
+F3
 
 bufexplorer
 -----------
+F2
 
 NERD_commenter
 --------------
-
-supertab
---------
+<leader>cl
+<leader>ci
 
 snipMate
 --------
@@ -24,7 +25,7 @@ syntastic
 ---------
 https://github.com/scrooloose/syntastic
 required depends:
-* pyflakes - for python 
+* pyflakes - for python
 * tidy - (x)html
 * jsl - JavaScript
 
@@ -44,7 +45,7 @@ http://www.vim.org/scripts/script.php?script_id=2607
 compview
 --------
 http://www.vim.org/scripts/script.php?script_id=1803
-override default search /
+use key ? <S-/>
 
 
 TODO:

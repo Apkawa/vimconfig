@@ -4,6 +4,10 @@ filetype plugin indent on
 set background=dark
 syntax on
 
+"Установка проверки правописания. требует установленных пакетов
+"vim-spell-{ru,en}
+setlocal spell spelllang=ru,en
+
 colorscheme desert256
 " Настройка цвета меню автодополнения
 highlight Pmenu ctermbg=grey ctermfg=black

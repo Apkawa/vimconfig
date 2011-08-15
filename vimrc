@@ -201,6 +201,11 @@ let ropevim_extended_complete=1
 
 
 "**********************************
-"      .. plugin
+"      zencoding plugin
+"      https://raw.github.com/mattn/zencoding-vim/master/TUTORIAL
 "**********************************
 
+
+"**********************************
+"      .. plugin
+"**********************************
